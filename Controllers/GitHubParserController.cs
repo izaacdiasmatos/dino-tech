@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Readgithubfile.API.Models;
 using Readgithubfile.API.Models.Requests;
+using Readgithubfile.API.Models.Responses;
 using Readgithubfile.API.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,9 @@ namespace Readgithubfile.API.Controllers
 
 		[HttpPost]
 		[Route("")]
-		public ActionResult<List<GitHubInfo>>  ProcessGitHubInfo([FromBody] GitHubInfoRequest request)
+		public ActionResult<List<GitHubFileExtetionCollectionResponse>>  WebScrapProcessing([FromBody] GitHubInfoRequest request)
         {
-			return Ok(_gitHubParserService.ScrapGitHub(request));
+			return Ok(_gitHubParserService.processGitHubRepositoryInfo(request));
 		}
 	}
 }

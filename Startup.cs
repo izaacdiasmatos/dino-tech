@@ -30,7 +30,10 @@ namespace Readgithubfile.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IGitHubParserRepository, GitHubParserRepository>();
+            services.AddScoped<IGitHubContenteDownloadRepository, GitHubContenteDownloadRepository>();
+            
             services.AddScoped<IGitHubParserService, GitHubParserService>();
+            
             services.AddControllers();
         }
 
