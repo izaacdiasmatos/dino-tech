@@ -8,12 +8,14 @@ namespace Readgithubfile.API.Models
     public class GitHubInfo
     {
         public string FileUrl { get; set; }
+        public string FileExtension { get; set; }
         public int Lines { get; set; }
         public float Bytes { get; set; }
 
-        public GitHubInfo(string fileUrl, int lines, float bytes)
+        public GitHubInfo(string fileUrl, string fileExtension, int lines, float bytes)
         {
             FileUrl = fileUrl;
+            FileExtension = fileExtension;
             Lines = lines;
             Bytes = bytes;
         }

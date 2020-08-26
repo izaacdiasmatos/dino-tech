@@ -22,17 +22,16 @@ namespace Readgithubfile.API.Repositories
         {
             //Validate URL from Git
             List<GitHubInfo> listInfo = new List<GitHubInfo>();
+            MatchCollection matches = generateMatchCollectionFromUrl(RegexStrings.REGEX_GITHUB_FILE_SCRAP, url);
 
-            Match match = generateMatcherFromUrl(RegexStrings.REGEX_GITHUB_FILE_SCRAP, url);
-
-            while (match.Success)
+            foreach (Match match in matches)
             {
                 string fileUrl = RegexStrings.GITHUB_ROOT_URL + betweenStrings(match.Groups[0].Value, RegexStrings.GITHUB_FILE_SCRAP_START, RegexStrings.GITHUB_FILE_SCRAP_END);
-                string rawURL = fileUrl.Replace(RegexStrings.GITHUB_ROOT_URL, RegexStrings.GITHUB_RAW_CONTENT_URL).Replace(RegexStrings.GITHUB_BLOB, "");
+                string rawUrl = fileUrl.Replace(RegexStrings.GITHUB_ROOT_URL, RegexStrings.GITHUB_RAW_CONTENT_URL).Replace(RegexStrings.GITHUB_BLOB, "");
 
-                if (ExistUrl(rawURL))
-                {
-                    GitHubInfo githubFileInfo = new GitHubInfo(fileUrl,0,0);
+                if (ExistUrl(rawUrl))
+                {                    
+                    GitHubInfo githubFileInfo = new GitHubInfo(fileUrl, Path.GetExtension(fileUrl),0,0);
                 }
             }
 
@@ -41,7 +40,7 @@ namespace Readgithubfile.API.Repositories
 
         public void scrapGitHubStats(GitHubInfo info)
         {
-            Match match = generateMatcherFromUrl(RegexStrings.REGEX_GITHUB_FILE_STATS_SCRAP, info.FileUrl);
+            Match match = generateMatchFromUrl(RegexStrings.REGEX_GITHUB_FILE_STATS_SCRAP, info.FileUrl);
 
             while (match.Success)
             {
@@ -72,12 +71,18 @@ namespace Readgithubfile.API.Repositories
             }
         }
 
-        private Match generateMatcherFromUrl(string regex, string url)
+        private MatchCollection generateMatchCollectionFromUrl(string regex, string url)
+        {
+            string urlContents = DonwloadURLContent(url);
+            return Regex.Matches(urlContents, regex);
+            //Pattern pattern = Pattern.compile(regex, Pattern.DOTALL | Pattern.UNIX_LINES);            
+	    }
+        private Match generateMatchFromUrl(string regex, string url)
         {
             string urlContents = DonwloadURLContent(url);
             return Regex.Match(urlContents, regex);
             //Pattern pattern = Pattern.compile(regex, Pattern.DOTALL | Pattern.UNIX_LINES);            
-	    }
+        }
 
         public string DonwloadURLContent(string url)
         {        
