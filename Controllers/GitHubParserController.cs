@@ -3,6 +3,7 @@ using Readgithubfile.API.Models;
 using Readgithubfile.API.Models.Requests;
 using Readgithubfile.API.Services.Interfaces;
 using System;
+using System.Collections.Generic;
 
 namespace Readgithubfile.API.Controllers
 {
@@ -18,9 +19,9 @@ namespace Readgithubfile.API.Controllers
 
 		[HttpPost]
 		[Route("")]
-		public void ProcessGitHubInfo([FromBody] GitHubInfoRequest request)
+		public ActionResult<List<GitHubInfo>>  ProcessGitHubInfo([FromBody] GitHubInfoRequest request)
         {
-			_gitHubParserService.ScrapGitHub(request);
+			return Ok(_gitHubParserService.ScrapGitHub(request));
 		}
 	}
 }

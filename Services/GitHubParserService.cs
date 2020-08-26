@@ -1,4 +1,5 @@
-﻿using Readgithubfile.API.Models.Requests;
+﻿using Readgithubfile.API.Models;
+using Readgithubfile.API.Models.Requests;
 using Readgithubfile.API.Repositories.Interfaces;
 using Readgithubfile.API.Services.Interfaces;
 using System;
@@ -16,9 +17,9 @@ namespace Readgithubfile.API.Services
             _gitHubParserRepository = gitHubParserRepository;
         }
 
-        public void ScrapGitHub(GitHubInfoRequest request)
+        public List<GitHubInfo> ScrapGitHub(GitHubInfoRequest request)
         {
-            _gitHubParserRepository.DonwloadURLContent(request.Url);
+            return _gitHubParserRepository.ScrapUrl(request.Url);
         }
     }
 }

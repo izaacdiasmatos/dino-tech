@@ -1,4 +1,5 @@
-﻿using Readgithubfile.API.Models.Requests;
+﻿using Readgithubfile.API.Models;
+using Readgithubfile.API.Models.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,6 @@ namespace Readgithubfile.API.Services.Interfaces
 {
     public interface IGitHubParserService
     {
-        void ScrapGitHub(GitHubInfoRequest request);
+        List<GitHubInfo> ScrapGitHub(GitHubInfoRequest request);
     }
 }
