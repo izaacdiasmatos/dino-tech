@@ -10,6 +10,6 @@ namespace Readgithubfile.API.Services.Interfaces
 {
     public interface IGitHubParserService
     {
-        List<GitHubFileExtetionCollectionResponse> processGitHubRepositoryInfo(GitHubInfoRequest request);
+        List<GitHubFileExtensionCollectionResponse> processGitHubRepositoryInfo(GitHubInfoRequest request);
     }
 }

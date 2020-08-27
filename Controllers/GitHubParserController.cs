@@ -20,7 +20,7 @@ namespace Readgithubfile.API.Controllers
 
 		[HttpPost]
 		[Route("")]
-		public ActionResult<List<GitHubFileExtetionCollectionResponse>>  WebScrapProcessing([FromBody] GitHubInfoRequest request)
+		public ActionResult<List<GitHubFileExtensionCollectionResponse>>  WebScrapProcessing([FromBody] GitHubInfoRequest request)
         {
 			return Ok(_gitHubParserService.processGitHubRepositoryInfo(request));
 		}

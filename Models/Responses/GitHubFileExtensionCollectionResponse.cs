@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Readgithubfile.API.Models.Responses
 {
-    public class GitHubFileExtetionCollectionResponse
+    public class GitHubFileExtensionCollectionResponse
     {
         public string Extetion { get; set; }
         public List<GitHubInfo> ListInfo { get; set; }

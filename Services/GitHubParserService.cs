@@ -25,11 +25,11 @@ namespace Readgithubfile.API.Services
             _gitHubContenteDownloadRepository = gitHubContenteDownloadRepository;
         }
 
-        public List<GitHubFileExtetionCollectionResponse> processGitHubRepositoryInfo(GitHubInfoRequest request)
+        public List<GitHubFileExtensionCollectionResponse> processGitHubRepositoryInfo(GitHubInfoRequest request)
         {
             ValidateExistentUrl(request);
             List<GitHubInfo> list = ScrapContent(request.Url);
-            return list.GroupBy(g => g.FileExtension).Select(l => new GitHubFileExtetionCollectionResponse { Extetion = l.Key,ListInfo = l.ToList()}).ToList();
+            return list.GroupBy(g => g.FileExtension).Select(l => new GitHubFileExtensionCollectionResponse { Extetion = l.Key,ListInfo = l.ToList()}).ToList();
         }
         
         private List<GitHubInfo> ScrapContent(string url)
