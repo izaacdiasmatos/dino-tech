@@ -27,8 +27,6 @@ C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\System.Diagnostics.Dia
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.csprojAssemblyReference.cache
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.AssemblyInfoInputs.cache
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.AssemblyInfo.cs
-C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.csproj.CoreCompileInputs.cache
-C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.RazorTargetAssemblyInfo.cache
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.csproj.CopyComplete
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\staticwebassets\Readgithubfile.API.StaticWebAssets.Manifest.cache
@@ -37,3 +35,10 @@ C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.dll
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.pdb
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.genruntimeconfig.cache
 C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.csproj.CoreCompileInputs.cache
+C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.MvcApplicationPartsAssemblyInfo.cache

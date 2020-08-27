@@ -9,5 +9,6 @@ namespace Readgithubfile.API.Utils
     {
         public static string GITHUB_ROOT_URL = "https://github.com";
         public static string GITHUB_RAW_CONTENT_URL = "https://raw.githubusercontent.com";
+        public static string SWAGGER_END_POINT_CONFIG = "/swagger/v1/swagger.json";
     }
 }

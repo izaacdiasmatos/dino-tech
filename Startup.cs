@@ -10,10 +10,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Readgithubfile.API.Repositories;
 using Readgithubfile.API.Repositories.Interfaces;
 using Readgithubfile.API.Services;
 using Readgithubfile.API.Services.Interfaces;
+using Readgithubfile.API.Utils;
 
 namespace Readgithubfile.API
 {
@@ -30,10 +32,11 @@ namespace Readgithubfile.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IGitHubParserRepository, GitHubParserRepository>();
-            services.AddScoped<IGitHubContenteDownloadRepository, GitHubContenteDownloadRepository>();
-            
+            services.AddScoped<IGitHubContenteDownloadRepository, GitHubContenteDownloadRepository>();            
             services.AddScoped<IGitHubParserService, GitHubParserService>();
-            
+
+            services.AddSwaggerGen();
+
             services.AddControllers();
         }
 
@@ -44,6 +47,14 @@ namespace Readgithubfile.API
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwaggerUI(c => 
+            {
+                c.SwaggerEndpoint(ConfigurationStrings.SWAGGER_END_POINT_CONFIG, "Read GitHub File");
+                c.RoutePrefix = string.Empty;
+            });
+
+            app.UseSwagger();
 
             app.UseHttpsRedirection();
 

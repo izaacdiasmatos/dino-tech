@@ -57,14 +57,12 @@ namespace Readgithubfile.API.Repositories
         public MatchCollection generateMatchCollectionFromUrl(string regex, string url)
         {
             string urlContents = _gitHubContenteDownloadRepository.DownloadContent(url);
-            return Regex.Matches(urlContents, regex);
-            //Pattern pattern = Pattern.compile(regex, Pattern.DOTALL | Pattern.UNIX_LINES);            
+            return Regex.Matches(urlContents, regex);          
 	    }
         public Match generateMatchFromUrl(string regex, string url)
         {
             string urlContents = _gitHubContenteDownloadRepository.DownloadContent(url);
             return Regex.Match(urlContents, regex);
-            //Pattern pattern = Pattern.compile(regex, Pattern.DOTALL | Pattern.UNIX_LINES);            
         }        
 
         public string BetweenStrings(string text, string start, string end)
