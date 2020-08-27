@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bgMp0/i4ZasIhF++RjH44YkzrQMKEZa/PmzWCAIqJ3wz45fYMJm3lKrv3xwDfQ2kMVd0i8DLy4jYeMhMwkyybQ==",
+  "dgSpecHash": "NkjOImHwOvmsRhJgih8yn2itbJ8t++tNj7Rnjl2vcRf5nlWgcdDUBa0Xk+ElYNFkQ+4ZhY8+5hVoLFGFgORPSg==",
   "success": true,
   "projectFilePath": "C:\\Repositorio\\Readgithubfile.API\\Readgithubfile.API.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\isaac\\.nuget\\packages\\microsoft.extensions.options\\3.1.7\\microsoft.extensions.options.3.1.7.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\swashbuckle.aspnetcore\\5.5.1\\swashbuckle.aspnetcore.5.5.1.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.5.1\\swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.5.1\\swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512",

@@ -24,7 +24,6 @@ C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.O
 C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.csprojAssemblyReference.cache
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.AssemblyInfoInputs.cache
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.AssemblyInfo.cs
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.RazorTargetAssemblyInfo.cache
