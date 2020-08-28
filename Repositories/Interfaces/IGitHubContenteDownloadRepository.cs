@@ -9,5 +9,6 @@ namespace Readgithubfile.API.Repositories.Interfaces
     {
         string DownloadContent(string url);
         bool ValidateUrl(string url);
+        bool ValidateUrlFormat(string url);
     }
 }

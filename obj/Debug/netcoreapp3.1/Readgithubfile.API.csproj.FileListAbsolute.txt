@@ -41,4 +41,3 @@ C:\Repositorio\Readgithubfile.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.csproj.CoreCompileInputs.cache
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Repositorio\Readgithubfile.API\obj\Debug\netcoreapp3.1\Readgithubfile.API.csprojAssemblyReference.cache

@@ -22,7 +22,15 @@ namespace Readgithubfile.API.Controllers
 		[Route("")]
 		public ActionResult<List<GitHubFileExtensionCollectionResponse>>  WebScrapProcessing([FromBody] GitHubInfoRequest request)
         {
-			return Ok(_gitHubParserService.processGitHubRepositoryInfo(request));
+            try
+            {
+				return Ok(_gitHubParserService.processGitHubRepositoryInfo(request));
+            }
+            catch(Exception e)
+            {
+				return BadRequest(e.Message);
+            }
+			
 		}
 	}
 }

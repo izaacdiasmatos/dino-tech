@@ -1,9 +1,11 @@
-﻿using Readgithubfile.API.Repositories.Interfaces;
+﻿using Microsoft.AspNetCore.Mvc.Routing;
+using Readgithubfile.API.Repositories.Interfaces;
+using Readgithubfile.API.Utils;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
-using System.Threading.Tasks;
+using System.Security.Policy;
+using System.Text.RegularExpressions;
 
 namespace Readgithubfile.API.Repositories
 {
@@ -33,5 +35,9 @@ namespace Readgithubfile.API.Repositories
                 else return false;
             }
         }
+        public bool ValidateUrlFormat(string url)
+        {
+            return url.StartsWith(StringMatcher.GITHUB_ROOT_URL) && Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute);
+        }        
     }
 }

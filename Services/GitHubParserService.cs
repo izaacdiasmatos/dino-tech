@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Routing;
-using Readgithubfile.API.Models;
+﻿using Readgithubfile.API.Models;
 using Readgithubfile.API.Models.Requests;
 using Readgithubfile.API.Models.Responses;
 using Readgithubfile.API.Repositories.Interfaces;
@@ -10,7 +9,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Readgithubfile.API.Services
 {
@@ -27,7 +25,7 @@ namespace Readgithubfile.API.Services
 
         public List<GitHubFileExtensionCollectionResponse> processGitHubRepositoryInfo(GitHubInfoRequest request)
         {
-            ValidateExistentUrl(request);
+            ValidateGitHubUrl(request);
             List<GitHubInfo> list = ScrapContent(request.Url);
             return list.GroupBy(g => g.FileExtension).Select(l => new GitHubFileExtensionCollectionResponse { Extetion = l.Key,ListInfo = l.ToList()}).ToList();
         }
@@ -44,7 +42,12 @@ namespace Readgithubfile.API.Services
 
                 if (_gitHubContenteDownloadRepository.ValidateUrl(rawUrl))
                 {
-                    GitHubInfo githubFileInfo = new GitHubInfo(fileUrl, Path.GetExtension(fileUrl), 0, 0);
+                    GitHubInfo githubFileInfo = new GitHubInfo(fileUrl, 
+                                                               Path.GetExtension(fileUrl),
+                                                               Path.GetFileName(fileUrl),
+                                                               0, 
+                                                               0);
+
                     _gitHubParserRepository.ScrapStats(githubFileInfo);
                     listInfo.Add(githubFileInfo);
                 }
@@ -56,10 +59,10 @@ namespace Readgithubfile.API.Services
             return listInfo;
         }
 
-        private void ValidateExistentUrl(GitHubInfoRequest request)
+        private void ValidateGitHubUrl(GitHubInfoRequest request)
         {
-            if (_gitHubContenteDownloadRepository.ValidateUrl(request.Url) == false)
-                throw new Exception("Not a valid URL");
+            if (_gitHubContenteDownloadRepository.ValidateUrlFormat(request.Url) == false)
+                throw new Exception("Not a GitHub valid URL");
         }
     }
 }

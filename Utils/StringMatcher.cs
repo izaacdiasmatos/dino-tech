@@ -7,6 +7,7 @@ namespace Readgithubfile.API.Utils
 {
     public class StringMatcher
     {
+        public static string GITHUB_ROOT_URL = "https://github.com";
         public static string GITHUB_FILE_SCRAP_START = "href=\"";
         public static string GITHUB_FILE_SCRAP_END = "\">";
         public static string GITHUB_LINES_SCRAP_START = "mt-md-0\">";
